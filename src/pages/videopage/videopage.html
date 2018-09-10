@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Ionic Media Capture
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+ 
+<ion-content>
+    <ion-card>
+        <ion-card-content>
+          <ion-card-title>
+      <button ion-button full (click)="captureVideo()">Video Çek</button>
+</ion-card-title>
+</ion-card-content>
+</ion-card>
+ 
+  <ion-list>
+    <ion-item *ngFor="let file of mediaFiles" tappable (click)="play(file)" text-wrap>
+      {{ file.name }}
+      <p>{{ file.size / 1000 / 1000 | number }} MB</p>
+      <video controls autoplay #myvideo *ngIf="file != ''">
+      </video>
+    </ion-item>
+  </ion-list>
+ 
+
+</ion-content>

@@ -1,0 +1,6 @@
+
+*ionic  start cameraApp tabs
+
+*cd ./cameraApp
+
+
